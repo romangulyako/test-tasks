@@ -1,4 +1,4 @@
-package io.romangulyako.live_coding_training.employee_filter;
+package io.romangulyako.live_coding_training.stream_api.employee_filter;
 
 import java.util.Comparator;
 import java.util.List;
@@ -30,6 +30,13 @@ public class Main {
                         )));
 
     }
+
+    Map<String, Long> countOfEmployeesByDepartment(List<Employee> employees) {
+        return employees.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment,
+                        Collectors.counting()));
+    }
+
     public static void main(String[] args) {
 
     }

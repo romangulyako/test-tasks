@@ -1,4 +1,4 @@
-package io.romangulyako.live_coding_training.employee_filter;
+package io.romangulyako.live_coding_training.stream_api.employee_filter;
 
 public class Employee {
     String name;
